@@ -1,0 +1,209 @@
+@use "sass:math";
+$primary-color: #1e3758;
+$secondary-color: #0056b3;
+$accent-color: #333;
+$background-theme: #e0e0e0;
+$font-size-title: 1.5rem;
+$font-size-subtitle: 1.1rem;
+$font-size-default: 1rem;
+$spacing-unit: 10px;
+$button-color: #ecf3f9;
+$hover-color: #555;
+$font-color: #555;
+$box-shadow-color: rgba(0, 0, 0, 0.2);
+$card-background: #fff;
+
+.projet-formation-container {
+  padding: $spacing-unit * 3;
+  background: $background-theme;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h1 {
+    color: $primary-color;
+    margin-bottom: $spacing-unit * 2;
+  }
+}
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: $spacing-unit * 2;
+
+  button {
+    background-color: $button-color;
+    border: none;
+    padding: $spacing-unit;
+    margin: 0 math.div($spacing-unit, 2);
+    border-radius: math.div($spacing-unit, 2);
+    cursor: pointer;
+    box-shadow: 0 2px 4px $box-shadow-color;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      background-color: darken($button-color, 10%);
+      box-shadow: 0 4px 8px darken($box-shadow-color, 10%);
+    }
+
+    &.active {
+      background-color: $secondary-color;
+      color: $card-background;
+    }
+  }
+}
+
+// Appliquez ce style au bouton actif de filtrage
+.filter-buttons button[aria-pressed="true"] {
+  background-color: $secondary-color;
+  color: $card-background;
+}
+
+// Style pour le bouton de tri par ID
+.filter-buttons .sort-button {
+  display: flex;
+  align-items: center;
+
+  .sort-icon {
+    margin-left: math.div($spacing-unit, 4);
+  }
+}
+
+// Vous pouvez ajouter ici des styles supplémentaires pour le reste de votre composant
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  gap: $spacing-unit * 2;
+  width: 100%;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  background: $card-background;
+  border-radius: $spacing-unit;
+  box-shadow: 0 4px 8px $box-shadow-color;
+  overflow: hidden;
+
+  .project-image-container {
+    flex: 0 0 250px; // largeur fixe pour l'image
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+  }
+
+  .project-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: $spacing-unit;
+    text-align: left;
+
+    .project-title {
+      display: flex;
+      justify-content: center;
+      color: $secondary-color;
+      font-size: $font-size-title;
+      margin-bottom: math.div($spacing-unit, 2);
+    }
+
+    .project-brief {
+      color: $accent-color;
+      font-size: $font-size-default;
+      margin-bottom: $spacing-unit;
+    }
+
+    .project-languages {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: $spacing-unit;
+      margin-top: $spacing-unit;
+
+      .language-logo {
+        display: inline-block;
+        width: 60px; // Taille des icônes
+        height: 60px;
+        padding: math.div($spacing-unit, 4); // Ajuster la taille du padding si nécessaire
+        margin-bottom: $spacing-unit;
+        background-color: $button-color; // Couleur de fond des icônes
+        border-radius: 25%; // Rend les icônes circulaires
+        box-shadow: 0 4px 8px $box-shadow-color;
+        transition: all 0.3s ease;
+
+        &:hover {
+          background-color: darken($button-color, 10%);
+          box-shadow: 0 6px 12px darken($box-shadow-color, 10%);
+          transform: translateY(-3px);
+          text-align: center;
+        }
+
+        img {
+          width: 100%;
+          height: auto;
+          transition: transform 0.3s ease;
+        }
+
+        .language-name {
+          display: none; // Cache le nom du langage par défaut
+          transition: 0.3s ease;
+        }
+
+        &:hover .language-name {
+          display: block; // Affiche le nom au survol
+          margin-top: math.div($spacing-unit, 4);
+        }
+      }
+    }
+    .project-view {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .project-view-button {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; // Appliquez la transition à l'état de base pour une animation fluide à l'entrée et à la sortie du survol
+
+  &:hover {
+    transform: translateY(-5px) scale(1.03); // Déplacez légèrement plus haut et agrandissez davantage
+    box-shadow: 0 10px 20px $box-shadow-color; // Ombre portée plus importante pour un effet plus prononcé
+    background-color: lighten($card-background, 3%); // Éclaircissez le fond un peu plus pour un contraste visible
+
+    .project-image-container img {
+      transform: scale(1.1); // Agrandissez l'image pour attirer l'attention
+      transition: transform 0.3s ease; // Animation douce pour l'image
+    }
+  }
+}
+@media (max-width: 768px) {
+  .projet-formation-container .projects-grid .project-card {
+    .project-title {
+      font-size: $font-size-subtitle;
+    }
+
+    .project-brief {
+      font-size: $font-size-default;
+    }
+
+    .project-languages .language-icon img {
+      width: 40px;
+      height: 40px;
+    }
+  }
+}

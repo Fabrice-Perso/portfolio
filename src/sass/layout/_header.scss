@@ -1,0 +1,43 @@
+// styles/Header.scss
+header {
+  width: 100%;
+  padding: 10px 20px; // Un peu de padding pour un meilleur look
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); // Une légère ombre pour donner de la profondeur
+  position: fixed; // Fixe le header en haut de la page
+  background-color: #1e3758; // Couleur de fond foncée pour le contraste
+  z-index: 100; // S'assure que le header reste au-dessus des autres éléments
+  top: 0;
+  nav {
+    display: flex;
+    justify-content: center; // Centre les liens de navigation
+    gap: 20px; // Espace entre les liens
+
+    a {
+      text-decoration: none; // Enlève le soulignement par défaut
+      color: #e0e0e0; // Couleur claire pour le texte pour un bon contraste
+      font-weight: bold; // Rend le texte un peu plus gras
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: #ffffff; // Changement de couleur au survol
+        border-bottom: 2px solid #ffffff; // Souligne le lien au survol
+      }
+
+      &.active {
+        color: #ffffff; // Couleur pour le lien actif
+        border-bottom: 2px solid #ffffff; // Souligne le lien actif
+      }
+    }
+  }
+}
+// Pour les petits écrans, vous pouvez ajouter un menu hamburger ou simplifier la navigation
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column; // Empile les liens verticalement
+    gap: 10px;
+
+    a {
+      padding: 10px; // Ajoute du padding pour de plus grands liens, plus faciles à cliquer sur un écran tactile
+    }
+  }
+}

@@ -1,0 +1,28 @@
+// ProjectCard.jsx
+import PropTypes from 'prop-types';
+
+const ProjectCard = ({ project, onOpenModal }) => (
+  <div className="project-card">
+    <div className="project-image-container">
+      <img src={project.imgcard} alt={`Aperçu de ${project.name}`} className="project-image" />
+    </div>
+    <div className="project-content">
+      <h2 className="project-title">{project.name}</h2>
+      <p className="project-brief">{project.brief}</p>
+      <button onClick={() => onOpenModal(project)} className="project-view-button">
+        Voir Plus
+      </button>
+    </div>
+  </div>
+);
+
+ProjectCard.propTypes = {
+  project: PropTypes.shape({
+    imgcard: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    brief: PropTypes.string.isRequired,
+  }).isRequired,
+  onOpenModal: PropTypes.func.isRequired,
+};
+
+export default ProjectCard;
