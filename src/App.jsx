@@ -1,4 +1,5 @@
 import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
+import ReactModal from "react-modal";
 import Header from './components/Header';
 import Contact from './components/Contact';
 import Home from "./pages/Home";
@@ -8,10 +9,17 @@ import LegalMentions from "./components/LegalMentions";
 import Social from "./components/Social";
 import MissingPage from "./components/MissingPage";
 
+// Configuration de React Modal
+ReactModal.setAppElement("#root");
+
 function App() {
+
+  // Définition du basename pour le routage en fonction de l'environnement
+  const basename = import.meta.env.MODE === "production" ? "/portfoliotest/" : "";
+
   return (
     <>
-    <BrowserRouter>
+    <BrowserRouter basename={basename}>
         <Header />
         <Routes>
           <Route>

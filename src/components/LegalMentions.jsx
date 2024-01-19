@@ -1,8 +1,27 @@
 /* eslint-disable react/no-unescaped-entities */
-
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
+import useScrollToHash from "../hooks/useScrollToHash";
 const LegalMentions = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    // Si l'URL contient un hash, on tente de faire défiler vers l'élément correspondant.
+    if (location.hash) {
+      const element = document.getElementById(location.hash.replace('#', ''));
+      if (element) {
+        // Utiliser 'scrollIntoView' pour déplacer la vue vers l'élément.
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }, [location]); // Les crochets indiquent que l'effet doit s'exécuter à chaque changement de 'location'.
+  
+    // Appel du hook avec la hauteur de l'en-tête si nécessaire.
+    useScrollToHash(100); // 100px est un exemple, remplacez par la hauteur de votre en-tête fixe
+  
   return (
-    <div className="legal-mentions">
+    <main>
+    <section className="legal-mentions" id="legal-mentions">
       <h1>Mentions Légales</h1>
 
       <h2>Éditeur du Site</h2>
@@ -35,7 +54,8 @@ const LegalMentions = () => {
       <p>Ce site est régi par le droit français et les tribunaux français auront juridiction exclusive pour tout litige relatif à l'utilisation de ce site.</p>
 
       <p>Dernière mise à jour : 01/12/2023</p>
-    </div>
+    </section>
+    </main>
   );
 };
 

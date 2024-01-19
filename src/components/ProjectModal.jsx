@@ -19,9 +19,9 @@ const ProjectModal = ({ isOpen, onClose, project }) => {
           </button>
         </div>
         <div className="modal-body">
-          <div className="modal-image-container">
-            <img src={project.img} alt={project.name} />
-          </div>
+        <div className="modal-image-container">
+          <img src={project.img} alt={project.name} />
+        </div>
           <div className="modal-project-details modal-project-card">
             <p>
               <strong>Thème:</strong> {project.theme}

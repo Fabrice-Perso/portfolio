@@ -14,7 +14,7 @@ const Footer = () => {
   return (
     <footer>
       {copyrightText}
-      <Link to="/mentions-legales" className="legal-link">
+      <Link to="/mentions-legales#legal-mentions" className="legal-link">
         Mentions Légales
       </Link>
     </footer>

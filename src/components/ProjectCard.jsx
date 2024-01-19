@@ -1,4 +1,3 @@
-// ProjectCard.jsx
 import PropTypes from 'prop-types';
 
 const ProjectCard = ({ project, onOpenModal }) => (
@@ -9,6 +8,11 @@ const ProjectCard = ({ project, onOpenModal }) => (
     <div className="project-content">
       <h2 className="project-title">{project.name}</h2>
       <p className="project-brief">{project.brief}</p>
+      <div className="project-languages">
+        {project.languages.map((lang, index) => (
+          <img key={index} src={lang.logo} alt={lang.name} className="language-logo" />
+        ))}
+      </div>
       <button onClick={() => onOpenModal(project)} className="project-view-button">
         Voir Plus
       </button>
@@ -21,6 +25,12 @@ ProjectCard.propTypes = {
     imgcard: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
     brief: PropTypes.string.isRequired,
+    languages: PropTypes.arrayOf(
+      PropTypes.shape({
+        name: PropTypes.string.isRequired,
+        logo: PropTypes.string // Notez que logo n'est pas marqué comme 'isRequired'
+      })
+    ).isRequired,
   }).isRequired,
   onOpenModal: PropTypes.func.isRequired,
 };

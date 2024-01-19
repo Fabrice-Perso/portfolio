@@ -4,8 +4,22 @@ import ProjectList  from '../components/ProjectList';
 // Importez vos données de projets personnels
 import formationProjects from '../data/formationProjects';
 import personalProjects from '../data/personalProjects';
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 
-function Home() {
+const Home = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      const element = document.getElementById(location.hash.slice(1));
+      if (element) {
+        element.scrollIntoView();
+      }
+    } else {
+      window.scrollTo(0, 0);
+    }
+  }, [location]);
   return (
     <main>
       <section className="About" id="about">

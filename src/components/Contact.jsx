@@ -1,6 +1,7 @@
 import { useForm } from "react-hook-form";
 // import emailjs from "@emailjs/browser";
 import { useState } from "react";
+import useScrollToHash from "../hooks/useScrollToHash";
 
 const Contact = () => {
   const {
@@ -28,9 +29,11 @@ const Contact = () => {
     //     setConfirmationMessageType("error");
     //   });
   };
-
+// Appel du hook avec la hauteur de l'en-tête si nécessaire.
+useScrollToHash(100); // 100px est un exemple, remplacez par la hauteur de votre en-tête fixe
   return (
-    <div className="Contact">
+    <main>
+    <section className="Contact" id="Contact">
       <h2>Formulaire de Contact</h2>
       <form onSubmit={handleSubmit(onSubmit)}>
         <label htmlFor="from_name" className="labelform">
@@ -62,7 +65,8 @@ const Contact = () => {
         <button type="submit">Envoyer</button>
       </form>
       {confirmationMessage && <p className={`confirmation-message ${confirmationMessageType}`}>{confirmationMessage}</p>}
-    </div>
+    </section>
+    </main>
   );
 };
 
