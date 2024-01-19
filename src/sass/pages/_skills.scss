@@ -8,7 +8,6 @@
   padding: 20px;
   border-radius: 10px;
   background: linear-gradient(to bottom, rgba(173, 216, 230, 0.9), rgba(173, 216, 230, 0.9));
-  // background: linear-gradient(to bottom, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9));
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   max-width: 80%;
 
@@ -21,35 +20,65 @@
   .skill-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; // Centre les éléments dans le conteneur
-    gap: 20px; // Espacement entre les éléments
+    justify-content: center;
+    gap: 20px;
   }
 
   .skill-card {
-    flex: 1 0 120px; // Permet aux cartes de grandir et de rétrécir avec un minimum de 120px
+    flex: 1 0 120px;
     display: flex;
-    justify-content: center; // Centre l'image horizontalement
-    align-items: center; // Centre l'image verticalement
+    justify-content: center;
+    align-items: center;
     height: 100px;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     background-color: white;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+
+    &.selected {
+      animation: pulse 1s infinite;
+
+      .skill-logo {
+        transform: scale(1.1);
+      }
+
+      .skill-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(255, 255, 255, 0.2);
+        z-index: 10;
+        border-radius: 10px;
+      }
+    }
 
     &:hover {
       transform: translateY(-5px);
       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     }
-    
+
     .skill-logo {
-      max-width: 100%; // Ajustez selon la taille désirée de vos logos
-      max-height: 100px; // Ajustez selon la hauteur désirée de vos logos
+      max-width: 100%;
+      max-height: 100px;
       transition: transform 0.3s ease;
-      
-      &:hover {
-        transform: scale(1.3);
-      }
     }
+  }
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(30, 55, 88, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 10px 10px rgba(30, 55, 88, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(30, 55, 88, 0);
   }
 }
 

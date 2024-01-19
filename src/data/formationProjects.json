@@ -77,6 +77,7 @@
       { "name": "JS" },
       { "name": "REACT" },
       { "name": "VITE.JS"}
+
     ],
     "url": "https://fabwebprojects.fr/Kasa"
   },
@@ -91,5 +92,24 @@
       { "name": "CSS" }
     ],
     "url": "https://fabwebprojects.fr/NinaCarducci/"
+  },
+  {
+    "id": 11,
+    "name": "Projet 11 - ArgentBank",
+    "theme": "Implémentez le front-end d'une application bancaire avec React + Redux",
+    "brief": "Mise en place d'un dahsboard et restriction d'accès avec une authentification utilisateur",
+    "mission": "Votre tâche consiste à créer le dashboard de l'application bancaire en utilisatn React + Redux.",
+    "languages": [
+        { "name": "HTML"},
+        { "name": "CSS"},
+        { "name": "SASS" },
+        { "name": "NODE" },
+        { "name": "JS" },
+        { "name": "REACT" },
+        { "name": "VITE.JS" },
+        { "name": "REDUX" },
+        { "name": "API" }
+      ],
+      "url": "https://fabwebprojects.fr/ArgentBank/"
   }
 ]

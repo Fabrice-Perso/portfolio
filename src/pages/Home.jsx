@@ -6,6 +6,7 @@ import formationProjects from '../data/formationProjects';
 import personalProjects from '../data/personalProjects';
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
+import { SkillsProvider } from '../context/SkillsContext';
 
 const Home = () => {
   const location = useLocation();
@@ -21,6 +22,7 @@ const Home = () => {
     }
   }, [location]);
   return (
+    <SkillsProvider>
     <main>
       <section className="About" id="about">
         <About />
@@ -35,6 +37,7 @@ const Home = () => {
         <ProjectList projects={personalProjects} title="Mes Projets Personnels" />
         </section>
     </main>
+    </SkillsProvider>
   );
 }
 
