@@ -59,16 +59,16 @@ const Timeline = () => {
             <span >
             {item.cardDetailedText}
             </span>
-            <div className="cardStyle">
+            <span className="cardStyle">
               {item.languages.map(lang => (
-                <span key={lang.name} className="card">
+                <span key={lang.name}>
                   <img className="logoStyle"
                     src={getLanguageLogo(lang.name)}
                     alt={lang.name}                    
                   />
                 </span>
               ))}
-            </div>
+            </span>
             </>
           )
         }));

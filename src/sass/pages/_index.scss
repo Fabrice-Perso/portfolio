@@ -41,7 +41,8 @@ main {
   padding: 0.5rem 0 0.5rem 0.5rem;
 }
 .logoStyle {
-  width: 80px;
+  max-width: 100%;
+    max-height: 100px;
   margin-right: 10px;
   /* Ajoutez d'autres styles si nécessaires, par exemple : */
   border-radius: 5px; /* Arrondir les coins */
@@ -54,7 +55,7 @@ main {
   display : flex;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: 25px;
+  gap: 15px;
   background-color: #f3e9f7; /* Couleur de fond légère */
   border-radius: 10px; /* Coins arrondis */
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Ombre légère */
@@ -63,4 +64,12 @@ main {
 }
 .testcolor{
   color: #1e3758;
+  font-size: 1rem;
+    font-weight: 600;
+    margin: 0;
+    text-align: left;
+    width: 95%;
+}
+.TimelineItemContentWrapper-sc-d7qjm1-0.timeline-card-content.rc-card{
+  background-color: #e0e0e0;
 }

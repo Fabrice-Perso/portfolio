@@ -50,6 +50,8 @@ const items = [
         { "name": "HTML"},
         { "name": "CSS"},
         { "name": "PHP" },
+        { "name": "PHPMYADMIN" },
+        { "name": "MYSQL" },
         { "name": "JS" },
         { "name": "SASS" },
         { "name": "NODE" },        
