@@ -9,10 +9,13 @@ import LogoMySql from "./img/logo/mysql.png";
 import LogoPHP from "./img/logo/php.png";
 import LogoVite from "./img/logo/vite.png";
 import LogoApi from "./img/logo/api.png";
-import LogoVba from "./img/logo/vba.jpg";
+// import LogoVba from "./img/logo/vba.jpg";
 import LogoNode from "./img/logo/NodeJS.png";
 import LogoRedux from "./img/logo/redux.png";
 import LogoPhpmyadmin from "./img/logo/phpmyadmin.png";
+import LogoExcel from "./img/logo/excel.png";
+import LogoVba from "./img/logo/vba.jpg";
+
 // import Slide1_1 from "./img/slideshow1/slide1.webp";
 // import Slide1_2 from "./img/slideshow1/slide2.webp";
 // import Slide1_3 from "./img/slideshow1/slide3.webp";
@@ -55,6 +58,7 @@ export {
   LogoVite,
   LogoApi,
   LogoVba,
+  LogoExcel,
   LogoNode,
   LogoRedux,
   LogoPhpmyadmin,

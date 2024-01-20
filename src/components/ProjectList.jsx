@@ -63,9 +63,6 @@ const ProjectList = ({ projects, title }) => {
     ? projects.filter((project) => project.languages.some(lang => lang.name === activeSkill))
     : projects;
   
-    console.log("Active Skill:", activeSkill);
-    console.log("Projects before filter:", projects);
-    console.log("Filtered Projects:", filteredProjects);
     return (
     <>
     <h1>{title}</h1>

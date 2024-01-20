@@ -1,0 +1,81 @@
+/* CSS pour PersonalProjectCard */
+$primary-color: #1e3758;
+$secondary-color: #0056b3;
+$card-background: #fff;
+$box-shadow-color: rgba(0, 0, 0, 0.2);
+$spacing-unit: 10px;
+
+.project-list-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 100px auto;
+    padding: 20px;
+    border-radius: 10px;
+    background: linear-gradient(to bottom, rgba(173, 216, 230, 0.9), rgba(173, 216, 230, 0.9));
+    // background: linear-gradient(to bottom, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9));
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 80%;
+  
+    h1 {
+      color: $primary-color;
+      margin-bottom: 2 * $spacing-unit;
+    }
+  
+.personal-project-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: white; /* Couleur de fond grise */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    transition: all 0.3s ease;
+  
+    &:hover {
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+  
+    .personal-project-image-container {
+      width: 100%;
+      margin-bottom: 10px;
+  
+      img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+      }
+    }
+  
+    .personal-project-content {
+      text-align: center;
+  
+      .personal-project-title {
+        color: #1e3758; /* Couleur bleu foncé pour le titre */
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+      }
+  
+      .personal-project-brief {
+        color: #555; /* Couleur gris foncé pour le texte */
+        font-size: 1rem;
+        margin-bottom: 20px;
+      }
+  
+      .personal-project-view-button {
+        background-color: #0056b3; /* Couleur bleu secondaire pour le bouton */
+        color: #fff;
+        border: none;
+        padding: 10px;
+        border-radius: 10px;
+        cursor: pointer;
+        text-align: center;
+  
+        &:hover {
+          background-color: #004c9d; /* Une nuance plus foncée pour le hover */
+        }
+      }
+    }
+  }
+}

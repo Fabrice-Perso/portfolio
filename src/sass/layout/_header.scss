@@ -1,12 +1,14 @@
 // styles/Header.scss
-header {
+.header {
   width: 100%;
-  padding: 10px 20px; // Un peu de padding pour un meilleur look
-  // box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); // Une légère ombre pour donner de la profondeur
-  position: fixed; // Fixe le header en haut de la page
-  // background-color: #1e3758; // Couleur de fond foncée pour le contraste
-  z-index: 100; // S'assure que le header reste au-dessus des autres éléments
+  padding: 10px 20px;
+  position: sticky;
   top: 0;
+  z-index: 1000;
+  background-color: #35485d; /* Une teinte bleu-gris foncée */
+  color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
   nav {
     display: flex;
     justify-content: center; // Centre les liens de navigation
@@ -14,17 +16,17 @@ header {
     font-size: large;
     a {
       text-decoration: none; // Enlève le soulignement par défaut
-      color: #1e3758; // Couleur claire pour le texte pour un bon contraste
+      color: #fff; // Couleur claire pour le texte pour un bon contraste
       font-weight: bold; // Rend le texte un peu plus gras
       transition: color 0.3s ease;
 
       &:hover {
-        color: #1e3758; // Changement de couleur au survol
+        color: #fff; // Changement de couleur au survol
         border-bottom: 2px solid #ffffff; // Souligne le lien au survol
       }
 
       &.active {
-        color: #1e3758; // Couleur pour le lien actif
+        color: #fff; // Couleur pour le lien actif
         border-bottom: 2px solid #ffffff; // Souligne le lien actif
       }
     }

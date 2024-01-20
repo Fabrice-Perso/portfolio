@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 function Header() {
     return (
-      <header>
+      <header className="header">
         <nav>
         <Link to="/#about">About</Link>
         <Link to="/#skills">Skills</Link>

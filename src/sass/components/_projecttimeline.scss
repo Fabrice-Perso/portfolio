@@ -1,0 +1,75 @@
+/* Custom styles for react-chrono */
+.projecttimeline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 100px auto;
+    padding: 20px;
+    border-radius: 10px;
+    background: linear-gradient(to bottom, rgba(173, 216, 230, 0.9), rgba(173, 216, 230, 0.9));
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 80%;
+  
+    .section-title {
+      color: #1e3758;
+      font-size: 2.5em;
+      margin-bottom: 1.5rem;
+    }
+}
+/* Adjust the card styles */
+.chrono-timeline .chrono-icons .chrono-icon {
+    background: transparent;
+    box-shadow: none;
+  }
+  
+  .chrono-timeline .timeline-horizontal .timeline-item.in-view .timeline-content .content-body,
+  .chrono-timeline .timeline-vertical .timeline-item.in-view .timeline-content .content-body {
+    background-color: #ffffff; /* Match your site's card color */
+    color: #333; /* Match your site's text color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Match your site's shadow style */
+    border-radius: 10px; /* Match your site's border radius */
+  }
+  
+  /* Adjust the title styles */
+  .chrono-timeline .timeline-horizontal .timeline-item .timeline-content .content-title,
+  .chrono-timeline .timeline-vertical .timeline-item .timeline-content .content-title {
+    color: #1e3758; /* Match your site's title color */
+  }
+  
+  /* Adjust the subtitle styles */
+  .chrono-timeline .timeline-horizontal .timeline-item .timeline-content .content-subtitle,
+  .chrono-timeline .timeline-vertical .timeline-item .timeline-content .content-subtitle {
+    color: #0056b3; /* Match your site's subtitle color */
+  }
+  
+  /* Adjust the detailed text styles */
+  .chrono-timeline .timeline-horizontal .timeline-item .timeline-content p,
+  .chrono-timeline .timeline-vertical .timeline-item .timeline-content p {
+    color: #555; /* Match your site's detail text color */
+  }
+  
+  /* Adjust the line and dot styles */
+  .chrono-timeline .timeline-horizontal .timeline-item:not(:last-child):after,
+  .chrono-timeline .timeline-vertical .timeline-item:not(:last-child):after {
+    background-color: #ddd; /* Match your site's line color */
+  }
+  
+  .chrono-timeline .timeline-horizontal .timeline-item .timeline-content .circle,
+  .chrono-timeline .timeline-vertical .timeline-item .timeline-content .circle {
+    border: 2px solid #0056b3; /* Match your site's dot border color */
+  }
+  
+  /* Adjust the navigation button styles */
+  .chrono-timeline .controls .button {
+    color: #0056b3; /* Match your site's button color */
+  }
+  
+  /* Adjust the navigation button hover styles */
+  .chrono-timeline .controls .button:hover {
+    background-color: #0056b3; /* Match your site's button hover background color */
+    color: #fff; /* Match your site's button hover text color */
+  }
+  
+  /* Add any additional custom styles needed for your site */
+  

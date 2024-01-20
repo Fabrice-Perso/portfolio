@@ -1,0 +1,18 @@
+.chrono__cardTitle {
+    color: #003366; /* Couleur du titre */
+  }
+  
+  .chrono__cardSubtitle {
+    color: #99CCFF; /* Couleur du sous-titre */
+  }
+  
+  .chrono__cardDetailedText {
+    color: #333333; /* Couleur du texte détaillé */
+  }
+  
+  .chrono__card {
+    background-color: #E6E6E6; /* Couleur de fond de la carte */
+  }
+  .TimelineCardHeader-sc{
+    background-color:yellow;
+  }
