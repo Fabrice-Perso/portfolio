@@ -3,24 +3,22 @@ import PropTypes from 'prop-types';
 import { useState } from 'react';
 import ProjectCard from './ProjectCard';
 import ProjectModal from './ProjectModal';
-import { LogoHTML, LogoCss, LogoSass, LogoJS, LogoReact, LogoVite, LogoApi, LogoNode, LogoRedux } from "../../../assets/images-skills-formation";
-import { LogoMySql,LogoPHP,LogoPhpmyadmin } from "../../../assets/images-skills-perso";
-import { viewp2,viewp3,viewp4, viewp5,viewp6,viewp8,viewp9,viewp11 } from "../../../assets/images-projet-formation";
-import { useSkills } from '../../../hooks/useSkills';
+import { LogoHTML, LogoCss, LogoSass, LogoJS, LogoReact, LogoVite, LogoApi, LogoNode, LogoRedux,LogoMySql,LogoPHP,LogoPhpmyadmin, ProjetF2, ProjetF3, ProjetF4, ProjetF5, ProjetF6, ProjetF8,ProjetF9, ProjetF11 } from "../assets/images";
+import { useSkills } from '../hooks/useSkills';
 
 const ProjectList = ({ projects, title }) => {
   const { activeSkill } = useSkills();
 
   const getProjectImage = (id) => {
     switch (id) {
-      case 2: return viewp2;
-      case 3: return viewp3;
-      case 4: return viewp4;
-      case 5: return viewp5;
-      case 6: return viewp6;
-      case 8: return viewp8;
-      case 9: return viewp9;
-      case 11: return viewp11;
+      case 2: return ProjetF2;
+      case 3: return ProjetF3;
+      case 4: return ProjetF4;
+      case 5: return ProjetF5;
+      case 6: return ProjetF6;
+      case 8: return ProjetF8;
+      case 9: return ProjetF9;
+      case 11: return ProjetF11;
       default: return null;
     }
   };
@@ -67,7 +65,7 @@ const ProjectList = ({ projects, title }) => {
   
     return (
     <>
-    <h2 className="section-title">{title}</h2>
+    <h1>{title}</h1>
     <div className="projects-grid">
       {filteredProjects.map((project) => (
         <ProjectCard

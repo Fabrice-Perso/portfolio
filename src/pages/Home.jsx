@@ -7,7 +7,7 @@ import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { SkillsProvider } from '../context/SkillsContext';
 import PersonalProjectCard from './home/PersonalProjectCard';
-
+import LogoImage from '../assets/img/logoImage.webp';
 const Home = () => {
   const location = useLocation();
 
@@ -23,8 +23,11 @@ const Home = () => {
   }, [location]);
   return (
     <SkillsProvider>
-    <main>
+    <main>    
       <section className="About" id="about">
+        <div className="logo-container">
+          <img src={LogoImage} alt="Logo FAB WEB PROJECT" className="logo" />
+        </div>
         <About />
       </section> 
        <section className="Skills" id="skills">

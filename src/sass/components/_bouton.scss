@@ -67,6 +67,11 @@ $box-shadow-color: rgba(0, 0, 0, 0.2);
     /* Effet de flou */
   }
 }
+.button-icon {
+  vertical-align: middle; /* Pour centrer verticalement l'icône avec le texte */
+  margin-right: 5px; /* Pour ajouter un peu d'espace entre l'icône et le texte */
+  font-size: 1.2em; /* Agrandit l'icône relative à la taille de la police du bouton */
+}
 @media (max-width: 768px) {
   .bouton-projet {
     margin: 10px 0;

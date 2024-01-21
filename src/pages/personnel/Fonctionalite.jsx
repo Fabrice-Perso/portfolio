@@ -1,17 +1,19 @@
 import { CiBank, CiShare2 } from 'react-icons/ci';
 import { TbLockShare } from 'react-icons/tb';
 import { FiBookOpen } from 'react-icons/fi';
+import { GrValidate } from 'react-icons/gr';
+import { FaLock } from 'react-icons/fa6';
 
 const Fonctionalite = () => {
   return (
     <div className="fonctionalite">
-      <h2 className="section-title">Fonctionnalités principales :</h2>
+      <h2 className="section-title">Fonctionnalités Principales :</h2>
       <div className="features-container">
         <div className="feature-card">
           <CiBank className="icon" />
           <div className="feature-text">
             <h3>Gestion de comptes bancaires personnels</h3>
-            <p>{"Jusqu'à 5 comptes de type : Courant-Différé-Joint et 5 comptes Épargne."}</p>
+            <p>{"Jusqu'à 5 comptes de types : Courant - Différé - Joint et 5 comptes Épargne."}</p>
           </div>
         </div>
         <div className="feature-card">
@@ -43,9 +45,16 @@ const Fonctionalite = () => {
           </div>
         </div>
         <div className="feature-card">
-          <CiBank className="icon" />
+          <FaLock className="icon" />
           <div className="feature-text">
             <h3>Validation des écritures</h3>
+            <p>{"Sur une période après rapprochement bancaire et réalisation de clôtures d'exercices."}</p>
+          </div>
+        </div>
+        <div className="feature-card">
+          <GrValidate className="icon" />
+          <div className="feature-text">
+            <h3>{"Clôture de l'Exercice Comptable"}</h3>
             <p>{"Sur une période après rapprochement bancaire et réalisation de clôtures d'exercices."}</p>
           </div>
         </div>

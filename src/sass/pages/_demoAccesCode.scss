@@ -1,15 +1,22 @@
 .demo-acces-code {
-    background: #f0f4f8;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    max-width: 600px;
-    margin: 20px auto;
-    .title {
-      text-align: center;
-      color: #102a43;
-      margin-bottom: 15px;
-    }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 100px auto;
+  padding: 20px;
+  border-radius: 10px;
+  background: linear-gradient(to bottom, rgba(173, 216, 230, 0.9), rgba(173, 216, 230, 0.9));
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 80%; // Contrôle la largeur sur les grands écrans
+
+  .section-title {
+    color: #1e3758;
+    font-size: 2em;
+    margin-bottom: 2rem;
+    font-weight: 600;
+  }
+
     .buttons {
       display: flex;
       justify-content: center;
@@ -33,9 +40,9 @@
         }
       }
       .button-github {
-        background: #333;
+        background: #1e3758;
         &:hover {
-          background: darken(#333, 10%);
+          background: darken(#1e3758, 10%);
         }
       }
     }

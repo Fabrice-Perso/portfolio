@@ -1,4 +1,3 @@
-import { FaInfoCircle } from 'react-icons/fa';
 import PropTypes from 'prop-types';
 
 const ProjectCard = ({ project, onOpenModal }) => (
@@ -15,7 +14,6 @@ const ProjectCard = ({ project, onOpenModal }) => (
         ))}
       </div>
       <button onClick={() => onOpenModal(project)} className="project-view-button">
-        <FaInfoCircle  className="icon button-icon" />
         Voir Plus
       </button>
     </div>

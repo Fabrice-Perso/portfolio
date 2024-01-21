@@ -1,6 +1,6 @@
 // About.js
 
-import { ProfilImage } from "../../assets/images";
+import { ProfilImage } from "../assets/images";
 
 const About = () => (
   <>
@@ -8,7 +8,7 @@ const About = () => (
     <div className="about-content">
       <img src={ProfilImage} alt="Fabrice MAGNAN de BELLEVUE" className="profile-photo" />
       <p className="About_Me">
-        {`Bonjour, je suis Fabrice MAGNAN de BELLEVUE. Autodidacte passionné, j'ai entamé ma carrière dans le support client allant du niveau 0 au 2 (support métier - technique) puis dans la migration de données (expertise dans la manipulation de données), fort de plus de 15 ans d'expérience. Cette période m'a permis d'acquérir une solide base technique et métier, ce qui me permet aujourd'hui d'être capable d'héberger mon portfolio sur mon propre serveur NAS.`}
+        {`Bonjour, je suis Fabrice MAGNAN de BELLEVUE. Autodidacte passionné, j'ai entamé ma carrière dans le support client et la technique, fort de plus de 15 ans d'expérience. Cette période m'a permis d'acquérir une solide base technique, notamment dans l'hébergement de sites sur mon propre serveur NAS.`}
 
         <br /><br />
 
@@ -20,7 +20,7 @@ const About = () => (
 
         <br /><br />
 
-        {`Mon expérience en hotline m'a enseigné à m'adapter aux différents interlocuteurs pour expliquer des concepts techniques et métier. Cette polyvalence me permet aujourd'hui de développer des outils métier efficaces, comme mon projet personnel de gestion comptable, témoignant de mon aptitude à créer des solutions informatiques adaptées et innovantes.`}
+        {`Mon expérience en hotline m'a enseigné à m'adapter aux différents interlocuteurs pour expliquer des concepts techniques. Cette polyvalence me permet aujourd'hui de développer des outils métier efficaces, comme mon projet personnel de gestion comptable, témoignant de mon aptitude à créer des solutions informatiques adaptées et innovantes.`}
       </p>
     </div>
   </>
