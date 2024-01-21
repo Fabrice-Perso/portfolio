@@ -1,6 +1,6 @@
 // About.js
 
-import { ProfilImage } from "../assets/images";
+import { ProfilImage } from "../../assets/images";
 
 const About = () => (
   <>

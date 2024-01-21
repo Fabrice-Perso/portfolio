@@ -19,29 +19,6 @@
       "nomimage": "view-create.webp"
     }
   ],
-  "chronologie": [
-    {
-      "version": "V 1.0.0 Excel",
-      "annee": "2016",
-      "description": "Fichier Excel avec des formules."
-    },
-    {
-      "version": "V 1.1.0",
-      "annee": "2020",
-      "description": "Utilisation de macros avec userforms et connexion à une base de données Access."
-    },
-    {
-      "version": "V 1.0.0 Web",
-      "annee": "2023",
-      "description": "Conversion en format web pour pratiquer mes acquis, utilisation de HTML-SASS-JS pour le Front-End et PHP/MySQL pour le Back-End."
-    },
-    {
-      "version": "V 2.0.0",
-      "annee": "2023",
-      "description": "Migration vers React avec Vite.js et création d'une API pour le Back-End."
-    }
-  ],
-  "technologies": ["HTML", "CSS", "SASS", "JS", "API", "NODE", "REACT", "VITE", "REDUX", "MYSQL", "PHP", "PHPMYADMIN"],
   "fonctionnalites": [
     "Gestion de comptes bancaires personnels (jusqu'à 5 comptes Courant-Différé-Joint et 5 comptes Épargne).",
     "Saisies d'écritures comptables de Revenus ou de Dépenses.",

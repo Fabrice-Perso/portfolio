@@ -1,15 +1,16 @@
 import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 import ReactModal from "react-modal";
 import Header from './components/Header';
-import Contact from './components/Contact';
-import Home from "./pages/Home";
 import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
-import LegalMentions from "./components/LegalMentions";
 import Social from "./components/Social";
-import MissingPage from "./components/MissingPage";
+
+
+import Home from "./pages/Home";
+import Contact from './pages/Contact';
+import LegalMentions from "./pages/LegalMentions";
+import MissingPage from "./pages/MissingPage";
 import PersonalProject from "./pages/PersonalProject";
-import Timeline from "./pages/Timeline";
 // Configuration de React Modal
 ReactModal.setAppElement("#root");
 
@@ -28,7 +29,6 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/personnel/ProjetPerso" element={<Navigate to="/ProjetPerso" replace />} />
             <Route path="/personal-project" element={<PersonalProject />} />
-            <Route path="/timeline" element={<Timeline />} />
             {/* <Route path="/ProjetPerso" element={<ProjetPerso />} />            
             <Route path="/entreprise/ProjetEntreprise" element={<Navigate to="/ProjetEntreprise" replace />} />
             <Route path="/ProjetEntreprise" element={<ProjetEntreprise />} /> */}

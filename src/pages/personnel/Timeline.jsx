@@ -1,25 +1,25 @@
 import { Chrono } from "react-chrono";
-import itemsData  from "./data";
-import { LogoHTML, LogoCss, LogoSass, LogoJS, LogoReact, LogoVite, LogoApi, LogoNode, LogoRedux,LogoMySql,LogoPHP,LogoPhpmyadmin,LogoExcel,LogoVba } from "../assets/images";
+import itemsData  from "../../data/personalProjectChronologie";
+import { LogoHTML, LogoCss, LogoSass, LogoJS, LogoReact, LogoVite, LogoApi, LogoNode, LogoRedux } from "../../assets/images-skills-formation";
+import { LogoMySql,LogoPHP,LogoPhpmyadmin,LogoExcel,LogoVba } from "../../assets/images-skills-perso";
 
 const Timeline = () => {
     const getLanguageLogo = (languageName) => {
         switch (languageName) {
-            case 'HTML': return LogoHTML;
-            case 'CSS': return LogoCss;
-            case 'SASS': return LogoSass;
-            case 'JS': return LogoJS;
-            case 'REACT': return LogoReact;
-            case 'VITE.JS': return LogoVite;
-            case 'API': return LogoApi;
-            case 'NODE': return LogoNode;
-            case 'REDUX': return LogoRedux;
-            case 'MYSQL': return LogoMySql;
-            case 'PHP': return LogoPHP;
-            case 'PHPMYADMIN': return LogoPhpmyadmin;
+          case 'HTML': return LogoHTML;
+          case 'CSS': return LogoCss;
+          case 'SASS': return LogoSass;
+          case 'JS': return LogoJS;
+          case 'REACT': return LogoReact;
+          case 'VITE.JS': return LogoVite;
+          case 'API': return LogoApi;
+          case 'NODE': return LogoNode;
+          case 'REDUX': return LogoRedux;
+          case 'MYSQL': return LogoMySql;
+          case 'PHP': return LogoPHP;
+          case 'PHPMYADMIN': return LogoPhpmyadmin;
           case 'EXCEL': return LogoExcel;
           case 'VBA': return LogoVba;
-          // ... et ainsi de suite pour les autres compétences
           default: return null; // ou une image par défaut si vous en avez une
         }
       };
@@ -44,16 +44,6 @@ const Timeline = () => {
 
     const itemsWithImages = sortedItemsData.map(item => ({
         ...item,
-        cardTitle: (
-            <span className="testcolor">
-              {item.cardTitle}
-            </span>
-          ),
-        cardSubtitle: (
-            <span className="customSpanStyle">
-              {item.cardSubtitle}
-            </span>
-          ),
           cardDetailedText: (
             <>
             <span >

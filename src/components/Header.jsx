@@ -4,10 +4,12 @@ function Header() {
     return (
       <header className="header">
         <nav>
-        <Link to="/#about">About</Link>
-        <Link to="/#skills">Skills</Link>
-        <Link to="/#projectsformation">Projects Formation</Link>
-        <Link to="/#projectsperso">Projects Perso</Link>
+        <Link to="/#about">A propos</Link>
+        <Link to="/#skills">Compétences</Link>
+        <Link to="/#projectsformation">CV</Link>
+        <Link to="/#projectsformation">Projets en Formation</Link>
+        <Link to="/#projectsformation">Projets en Entreprise</Link>
+        <Link to="/#projectsperso">Projet Personnel</Link>
         <Link to="/Contact#contact">Contact</Link>
         </nav>
       </header>

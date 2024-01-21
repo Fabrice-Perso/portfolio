@@ -2,7 +2,6 @@ import Gallery from 'react-image-gallery';
 import 'react-image-gallery/styles/css/image-gallery.css';
 import PropTypes from 'prop-types';
 import { useNavigate } from 'react-router-dom';
-
 // Importez vos images à partir du fichier externe (ajustez les chemins selon votre structure de fichiers)
 import { viewLogin, viewList, viewAccount, viewCreate } from '/src/assets/images-projet-perso.js';
 
@@ -22,12 +21,12 @@ const getImagePathByTitle = (nomimage) => {
   }
 };
 
-const PersonalProjectCard = ({ project,title, images, description, projectDetails }) => {
+const PersonalProjectCard = ({ project,title, images, description }) => {
   const navigate = useNavigate();
 
   const redirectToDetails = () => {
     // Passez les informations du projet en tant que paramètres
-    navigate('/personal-project', { state: { projectDetails } });
+    navigate('/personal-project');
   };
 
   // Ajoutez le chemin complet aux noms des images en utilisant le champ "nomimage"
@@ -71,7 +70,6 @@ PersonalProjectCard.propTypes = {
     })
   ).isRequired,
   description: PropTypes.string.isRequired,
-  projectDetails: PropTypes.object.isRequired, // Changez le type en object
 };
 
 export default PersonalProjectCard;

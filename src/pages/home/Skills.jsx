@@ -1,7 +1,8 @@
 // Skills.js
-import { LogoHTML, LogoCss, LogoSass, LogoJS, LogoReact, LogoVite, LogoRedux, LogoMySql, LogoPHP, LogoApi, LogoNode, LogoPhpmyadmin } from "../assets/images";
-import useScrollToHash from "../hooks/useScrollToHash";
-import { useSkills } from '../hooks/useSkills';
+import { LogoHTML, LogoCss, LogoSass, LogoJS, LogoReact, LogoVite, LogoApi, LogoNode, LogoRedux } from "../../assets/images-skills-formation";
+import { LogoMySql,LogoPHP,LogoPhpmyadmin } from "../../assets/images-skills-perso";
+import useScrollToHash from "../../hooks/useScrollToHash";
+import { useSkills } from '../../hooks/useSkills';
 import { useState } from 'react';
 
 const Skills = () => {

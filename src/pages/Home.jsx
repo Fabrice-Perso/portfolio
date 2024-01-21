@@ -1,15 +1,12 @@
-import About from '../components/About';
-import Skills from '../components/Skills';
-import ProjectList  from '../components/ProjectList';
-import ProjetPerso from '../components/ProjetPerso';
-import ProjetTest from '../components/PersonalProjectTimeline';
-// Importez vos données de projets personnels
+import About from './home/About';
+import Skills from './home/Skills';
+import ProjectList  from './home/formation/ProjectList';
 import formationProjects from '../data/formationProjects';
 import personalProjects from '../data/personalProjects';
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { SkillsProvider } from '../context/SkillsContext';
-import PersonalProjectCard from '../components/PersonalProjectCard';
+import PersonalProjectCard from './home/PersonalProjectCard';
 
 const Home = () => {
   const location = useLocation();
@@ -29,26 +26,21 @@ const Home = () => {
     <main>
       <section className="About" id="about">
         <About />
-        </section> 
-        <section className="Skills" id="skills">
+      </section> 
+       <section className="Skills" id="skills">
         <Skills />
-        </section>
-        <section className="project-list-container" id="projectsformation">
+      </section>
+      <section className="project-list-container" id="projectsformation">
         <ProjectList projects={formationProjects} title="Mes Projets de Formation"/>
-        </section>
-        {/* <section className="project-list-container" id="projectsperso">
-        <ProjetPerso projects={personalProjects} title="Mon Projet Personnel" />
-        </section> */}
-        <section className="project-list-container" id="projectsperso">
-        <PersonalProjectCard
-          title="Mon Projet Personnel"
-          project={personalProjects.name} 
-          images={personalProjects.images} 
-          description={personalProjects.description}
-          projectDetails={personalProjects.chronologie}
-        />
-        </section>
-        {/* <ProjetTest /> */}
+      </section>
+      <section className="project-list-container" id="projectsperso">
+        <PersonalProjectCard 
+         title="Mon Projet Personnel"
+         project={personalProjects.name} 
+         images={personalProjects.images} 
+         description={personalProjects.description}
+       />
+      </section>
     </main>
     </SkillsProvider>
   );
