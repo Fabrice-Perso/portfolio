@@ -1,0 +1,53 @@
+// detailsEcritures.scss
+.details-ecritures {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 100px auto;
+    padding: 20px;
+    border-radius: 10px;
+    background: linear-gradient(to bottom, rgba(173, 216, 230, 0.9), rgba(173, 216, 230, 0.9));
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 80%; // Une largeur maximale pour un contrôle meilleur sur les grands écrans
+  
+    .section-title {
+      color: #1e3758;
+      font-size: 2em;
+      margin-bottom: 2rem;
+      font-weight: 600;
+    }
+    .card {
+      background: white;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      ul {
+        list-style: none;
+        padding: 0;
+        li {
+          margin-bottom: 10px;
+          padding-left: 20px;
+          position: relative;
+          &:before {
+            content: '';
+            width: 8px;
+            height: 8px;
+            background: #007FFF;
+            border-radius: 50%;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+          }
+        }
+      }
+      p {
+        background: #e0f7fa;
+        padding: 10px;
+        border-left: 4px solid #007FFF;
+        font-style: italic;
+      }
+    }
+  }
+  

@@ -1,11 +1,16 @@
 import viewlogin from '../assets/img/projet_perso/view-login.webp';
-
+import viewLoginExcel from '../assets/img/projet_perso/view-login-excel.webp';
 const items = [
     {
       title: "2016",
       cardTitle: "V 1.0.0",
-      cardSubtitle:
-        "Fichier Excel avec des formules",
+      cardSubtitle:"Fichier Excel avec des formules",
+      media: {
+        type: "IMAGE",
+        source: {
+          url: viewLoginExcel // Le chemin vers l'image de votre logo
+        }
+      },
         "languages": [
           { "name": "EXCEL" }
         ],
@@ -14,6 +19,12 @@ const items = [
       title: "2020",
       cardTitle: "V 1.1.0",
       cardSubtitle: `Utilisation de macros avec userforms et connexion à une base de données Access.`,
+      media: {
+        type: "IMAGE",
+        source: {
+          url: viewLoginExcel // Le chemin vers l'image de votre logo
+        }
+      },
       "languages": [
         { "name": "EXCEL" },
         { "name": "VBA" }
@@ -32,7 +43,10 @@ const items = [
       "languages": [
         { "name": "HTML" },
         { "name": "CSS" },
-        { "name": "SASS"}
+        { "name": "PHP" },
+        { "name": "JS" },
+        { "name": "PHPMYADMIN" },
+        { "name": "MYSQL" },        
       ],
     },
     {

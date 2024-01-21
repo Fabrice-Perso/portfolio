@@ -1,0 +1,42 @@
+.demo-acces-code {
+    background: #f0f4f8;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 20px auto;
+    .title {
+      text-align: center;
+      color: #102a43;
+      margin-bottom: 15px;
+    }
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      .button-projet, .button-github {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        padding: 10px 15px;
+        border-radius: 8px;
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+        background: #007FFF;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        &:hover {
+          background: darken(#007FFF, 10%);
+        }
+        .icon {
+          display: block;
+        }
+      }
+      .button-github {
+        background: #333;
+        &:hover {
+          background: darken(#333, 10%);
+        }
+      }
+    }
+  }
