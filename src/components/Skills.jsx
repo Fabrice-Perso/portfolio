@@ -20,7 +20,7 @@ const Skills = () => {
       { name: 'VITE.JS', logo: LogoVite },
       { name: 'API', logo: LogoApi },
       { name: 'NODE', logo: LogoNode },
-      { name: 'Redux', logo: LogoRedux },
+      { name: 'REDUX', logo: LogoRedux },
       { name: 'MySql', logo: LogoMySql },
       { name: 'PHP', logo: LogoPHP },
       { name: 'Phpmyadmin', logo: LogoPhpmyadmin },
